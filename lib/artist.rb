@@ -17,7 +17,7 @@ class Artist
 
   def genres
     genres = []
-    self.song.collect {|song| genres << song.genre}
+    self.songs.collect {|song| genres << song.genre}
     genres
   end
 
