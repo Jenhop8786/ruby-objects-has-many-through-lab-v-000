@@ -1,23 +1,23 @@
-class Patient 
-  attr_accessor :name 
+class Patient
+  attr_accessor :name
 
   def initialize(name)
-    @name = name 
+    @name = name
     @appointments = []
-  end 
+  end
 
   def appointments
-    @appointments 
-  end 
+    @appointments
+  end
 
   def add_appointment(appointment)
-    self.appointments << appointment 
-    appointment.patient = self 
-  end 
+    self.appointments << appointment
+    appointment.patient = self
+  end
 
-  def doctors 
+  def doctors
     doctors = []
     self.appointments.map {|appt|doctors << appt.doctor}
-    doctors 
-  end 
-end 
+    doctors
+  end
+end
